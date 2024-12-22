@@ -36,7 +36,7 @@ public class CategoryInterfaceImpl implements CategoryServiceInterface {
 
     @Override
     public Category getCategoryById(Long id) {
-        // Use custom exception instead of RuntimeException
+      
         return categoryRepository.findById(id)
                 .orElseThrow(() -> new CategoryNotFoundException("Category not found with id: " + id));
     }
